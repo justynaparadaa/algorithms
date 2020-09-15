@@ -1,12 +1,5 @@
-import java.util.Scanner;
-
-public class Aircrafting {
-
-
-    public static void main(String[] args) {
-
 /*
-            Watermelon
+                Watermelon
             One hot summer day Pete and his friend Billy decided to buy a watermelon. They chose the
         biggest and the ripest one, in their opinion. After that the watermelon was weighed, and the
         scales showed w kilos. They rushed home, dying of thirst, and decided to divide the berry,
@@ -22,8 +15,13 @@ public class Aircrafting {
                 Output
         Print YES, if the boys can divide the watermelon into two parts, each of them weighing even
         number of kilos; and NO in the opposite case.
-
 */
+
+import java.util.Scanner;
+
+public class Aircrafting {
+
+    public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         String s = scanner.nextLine();

@@ -1,11 +1,6 @@
-
-import java.util.Scanner;
-
-public class Watermelon {
-
-    public static void main(String[] args) {
-
-/*        One hot summer day Pete and his friend Billy decided to buy a watermelon. They chose the
+/*
+                Watermelon
+                One hot summer day Pete and his friend Billy decided to buy a watermelon. They chose the
         biggest and the ripest one, in their opinion. After that the watermelon was weighed, and the
         scales showed w kilos. They rushed home, dying of thirst, and decided to divide the berry,
         however they faced a hard problem.
@@ -14,19 +9,25 @@ public class Watermelon {
         obligatory that the parts are equal. The boys are extremely tired and want to start their meal as
         soon as possible, that's why you should help them and find out, if they can divide the watermelon
         in the way they want. For sure, each of them should get a part of positive weight.
+
                 Input
         The first (and the only) input line contains integer number w (1 ≤ w ≤ 100) — the weight of the
         watermelon bought by the boys.
                 Output
         Print YES, if the boys can divide the watermelon into two parts, each of them weighing even
         number of kilos; and NO in the opposite case.
-
 */
+
+import java.util.Scanner;
+
+public class Watermelon {
+
+    public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
 
-        if(i > 3 && i % 2 == 0){
+        if (i > 3 && i % 2 == 0) {
             System.out.println("YES");
         } else {
             System.out.println("NO");

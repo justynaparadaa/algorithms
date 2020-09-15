@@ -1,12 +1,5 @@
-import java.util.Arrays;
-import java.util.Scanner;
-
-public class BoyOrGirl {
-
-    public static void main(String[] args) {
-
 /*
-            Boy or girl algorithm:
+                Boy or girl algorithm:
             Those days, many boys use beautiful girls ' photos as avatars in forums. So it is pretty hard to tell
         the gender of a user at the first glance.Last year, our hero went to a forum and had a nice chat
         with a beauty(he thought so).After that they talked very often and eventually they became a
@@ -25,6 +18,13 @@ public class BoyOrGirl {
         print "IGNORE HIM!" (without the quotes).
 */
 
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class BoyOrGirl {
+
+    public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         String s = scanner.nextLine();
 
@@ -37,11 +37,10 @@ public class BoyOrGirl {
         }
         long count = Arrays.stream(strings).distinct().count();
 
-        if(count % 2 != 0){
+        if (count % 2 != 0) {
             System.out.println("IGNORE HIM!");
         } else {
             System.out.println("CHAT WITH HER!");
         }
-
     }
 }
