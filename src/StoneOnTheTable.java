@@ -17,8 +17,29 @@
 
 */
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class StoneOnTheTable {
 
-    //TODO
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        int stoneNumber = scanner.nextInt();
+        scanner.nextLine();
+        String stoneColors = scanner.next();
+
+        int counter = 0;
+        ArrayList<String> stones = new ArrayList<>();
+        for (int i = 0; i < stoneNumber; i++) {
+            char c = stoneColors.charAt(i);
+            stones.add(String.valueOf(c));
+        }
+        for (int i = 0; i < stoneNumber - 1; i++) {
+            if (stones.get(i).equalsIgnoreCase(stones.get(i + 1)))
+                counter++;
+        }
+        System.out.println(counter);
+    }
 
 }
