@@ -23,8 +23,68 @@
         If there are several consecutive months that fit the sequence, print "YES" (without quotes).
         Otherwise, print "NO" (without quotes).
         You can print each letter in arbitrary case (small or large).'
+
+        You can print each letter in arbitrary case (small or large).
+
+        Examples
+
+        input
+        Copy
+        4
+        31 31 30 31
+        output
+        Copy
+        Yes
+        input
+        Copy
+        2
+        30 30
+        output
+        Copy
+        No
+
+        In the first example the integers can denote months July, August, September and October.
+        In the second example the answer is no, because there are no two consecutive months each
+        having 30 days.
+        In the third example the months are: February (leap year) — March — April – May — June.
+        In the fourth example the number of days in the second month is 28, so this is February. March
+        follows February and has 31 days, but not 30, so the answer is NO.
+        In the fifth example the months are: December — January — February (non-leap year).
+
 */
 
+import java.util.Scanner;
+
 public class MonthsAndYears {
-    //TODO
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        int numberOfInteger = scanner.nextInt();
+        scanner.nextLine();
+        String monthDays = scanner.nextLine();
+
+        String daysNumberFrScannerWithoutSpaces = monthDays.trim().replace(" ", "");
+
+        String notLeapYearDays = "31 28 31 30 31 30 31 31 30 31 30 31";
+        String leapYearDays = "31 29 31 30 31 30 31 31 30 31 30 31";
+
+        StringBuilder daysForFourYearWithLeapYearBuilder = new StringBuilder();
+        String daysForSixYearsWithLeapYearInTheMiddle = daysForFourYearWithLeapYearBuilder
+                .append(notLeapYearDays)
+                .append(notLeapYearDays)
+                .append(leapYearDays)
+                .append(notLeapYearDays)
+                .append(notLeapYearDays)
+                .append(notLeapYearDays)
+                .toString()
+                .replace(" ", "");
+
+        if(daysForSixYearsWithLeapYearInTheMiddle.contains(daysNumberFrScannerWithoutSpaces)){
+            System.out.println("YES");
+        } else
+            System.out.println("NO");
+
+    }
+
 }
